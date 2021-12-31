@@ -16,11 +16,15 @@ func repoMigrate(option Option) error {
 		return nil
 	}
 
-	if err := os.MkdirAll(option.Ro.To, os.ModePerm); err != nil {
+	if err := os.MkdirAll(option.Do.To, os.ModePerm); err != nil {
 		return err
 	}
 
 	if err := createDBIfNotExists(option); err != nil {
+		return err
+	}
+
+	if err := os.MkdirAll(option.Ro.To, os.ModePerm); err != nil {
 		return err
 	}
 
