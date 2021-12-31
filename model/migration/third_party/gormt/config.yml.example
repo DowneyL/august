@@ -1,0 +1,29 @@
+base:
+  is_dev: false
+db_info:
+  database: wms
+  host: 192.168.1.47
+  password: root
+  port: 3306
+  type: 0
+  username: root
+db_tag: gorm
+is_foreign_key: true
+is_gui: false
+is_null_to_point: false
+is_out_file_by_table_name: true
+is_out_func: false
+is_out_sql: false
+is_table_name: true
+is_web_tag: false
+is_web_tag_pk_hidden: true
+out_dir: ""
+out_file_name: ""
+self_type_define:
+  datetime: time.Time
+  time: time.Time
+simple: false
+table_names: ""
+table_prefix: -wms_
+url_tag: json
+web_tag_type: 1
