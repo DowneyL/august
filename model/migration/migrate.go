@@ -22,14 +22,14 @@ func Migration(option Option) {
 }
 
 func resetConfig(option Option) error {
-	config.Conf().Set("out_dir", option.Po.To)
-	config.Conf().Set("table_prefix", option.TablePrefix)
-	config.Conf().Set("table_names", option.TableNames)
-	config.Conf().Set("db_info.host", option.Do.Host)
-	config.Conf().Set("db_info.port", option.Do.Port)
-	config.Conf().Set("db_info.username", option.Do.Username)
-	config.Conf().Set("db_info.password", option.Do.Password)
-	config.Conf().Set("db_info.database", option.Do.DBName)
+	config.SetConf("out_dir", option.Po.To)
+	config.SetConf("table_prefix", option.TablePrefix)
+	config.SetConf("table_names", option.TableNames)
+	config.SetConf("db_info.host", option.Do.Host)
+	config.SetConf("db_info.port", option.Do.Port)
+	config.SetConf("db_info.username", option.Do.Username)
+	config.SetConf("db_info.password", option.Do.Password)
+	config.SetConf("db_info.database", option.Do.DBName)
 
 	return config.Conf().WriteConfigAs(config.Filepath())
 }

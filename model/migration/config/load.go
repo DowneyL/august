@@ -32,6 +32,10 @@ func Conf() *viper.Viper {
 	return conf
 }
 
+func SetConf(key string, value interface{}) {
+	conf.Set(key, value)
+}
+
 func Filepath() string {
 	return fmt.Sprintf("%s/%s.%s", configPath, configName, configType)
 }
